@@ -223,6 +223,8 @@ pre tt:after {
 }
 
 /* // Custom Swiper styling */
-.swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+.swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-button-prev,
+.swiper-button-next {
   display: none;
 }

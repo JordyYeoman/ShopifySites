@@ -1,8 +1,10 @@
 import { Link } from "gatsby"
 import React from "react"
-import GumtreeLeaves from "../assets/icons/Gumtree_leaves.svg"
+import GumtreeLeaves from "../assets/icons/Gumtree-leaves.svg"
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react"
 import { Pagination, Navigation } from "swiper"
+import ChevronRightArrow from "../assets/icons/Chevron-right.svg"
+import ChevronLeftArrow from "../assets/icons/Chevron-left.svg"
 import "swiper/css"
 import "swiper/css/pagination"
 import "swiper/css/navigation"
@@ -56,6 +58,40 @@ const FeatureProductImages = [
   },
 ]
 
+const SwiperNextButton = () => {
+  const swiperHook = useSwiper()
+  return (
+    <div
+      onClick={() => {
+        swiperHook.slideNext()
+      }}
+    >
+      <ChevronRightArrow className="w-5 h-5 p-4 mr-8 bg-red-200 rounded-full" />
+    </div>
+  )
+}
+const SwiperPrevButton = () => {
+  const swiperHook = useSwiper()
+  return (
+    <div
+      onClick={() => {
+        swiperHook.slidePrev()
+      }}
+    >
+      <ChevronLeftArrow className="w-5 h-5 p-4 ml-8 bg-red-200 rounded-full" />
+    </div>
+  )
+}
+
+const NavigationArrows = () => {
+  return (
+    <div className="flex flex-row justify-center items-center bottom-8 right-8 z-10 absolute">
+      <SwiperNextButton />
+      <SwiperPrevButton />
+    </div>
+  )
+}
+
 function Hero() {
   return (
     <div className="flex flex-row h-[80vh] w-full">
@@ -70,6 +106,7 @@ function Hero() {
           onSlideChange={() => console.log("slide change")}
           onSwiper={swiper => console.log(swiper)}
         >
+          <NavigationArrows />
           {FeatureProductImages.map(featureProduct => {
             return (
               <SwiperSlide key={featureProduct.name}>

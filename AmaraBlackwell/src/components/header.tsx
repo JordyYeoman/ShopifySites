@@ -28,7 +28,7 @@ type NavigationLink = {
 }
 
 const Header = () => (
-  <div className="w-full bg-blue-200 border-b-4 border-white">
+  <div className="w-full bg-blue-200">
     <div className="flex items-center justify-between relative h-24 px-8 mx-auto max-w-screen-2xl">
       <div className="h-auto w-auto">
         {navigationLinks.map((el: NavigationLink) => {
