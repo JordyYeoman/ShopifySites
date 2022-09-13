@@ -66,7 +66,7 @@ const SwiperNextButton = () => {
         swiperHook.slideNext()
       }}
     >
-      <ChevronRightArrow className="w-5 h-5 p-4 mr-8 bg-red-200 rounded-full" />
+      <ChevronRightArrow className="w-5 h-5 p-4 bg-red-200 rounded-full" />
     </div>
   )
 }
@@ -78,7 +78,7 @@ const SwiperPrevButton = () => {
         swiperHook.slidePrev()
       }}
     >
-      <ChevronLeftArrow className="w-5 h-5 p-4 ml-8 bg-red-200 rounded-full" />
+      <ChevronLeftArrow className="w-5 h-5 p-4 bg-red-200 rounded-full" />
     </div>
   )
 }
