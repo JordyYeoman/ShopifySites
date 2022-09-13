@@ -19,13 +19,13 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Header siteTitle={"Huh"} />
       <Hero />
       <main>{children}</main>
       <footer className="w-full bg-blue-200 h-32">
         © {new Date().getFullYear()} &middot; Built by
         {` `}
-        <a href="/">Yeoman Industries</a>
+        <a href="/">Yeoman Industriess</a>
       </footer>
     </>
   )
