@@ -3,29 +3,28 @@ require('dotenv').config();
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `Yeoman Industries`,
-    siteUrl: `https://yeomanindustries.myshopify.com/`,
+    title: `AmaraBlackwellArt`,
+    siteUrl: `https://amarablackwellarts.myshopify.com`,
   },
   graphqlTypegen: true,
   plugins: [
     {
       resolve: 'gatsby-source-shopify',
       options: {
-        password: process.env.SHOPIFY_APP_ADMIN_API_TOKEN,
-        storeUrl: process.env.GATSBY_MYSHOPIFY_URL,
-        shopName: 'YeomanIndustries',
-        accessToken: '',
+        shopName: 'amarablackwellarts.myshopify.com',
+        accessToken: process.env.STOREFRONT_TOKEN,
+        storeUrl: 'amarablackwellarts.myshopify.com',
+        password: process.env.ADMIN_API,
       },
     },
     'gatsby-plugin-postcss',
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: 'G-L4F67N0FR8',
+        trackingId: 'G-JXQ7W75K6Q',
       },
     },
     'gatsby-plugin-sitemap',
@@ -51,6 +50,14 @@ const config: GatsbyConfig = {
         path: './src/pages/',
       },
       __key: 'pages',
+    },
+    {
+      resolve: `gatsby-plugin-react-svg`,
+      options: {
+        rule: {
+          include: /assets/,
+        },
+      },
     },
   ],
 };
