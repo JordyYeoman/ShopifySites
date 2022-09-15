@@ -39,7 +39,6 @@ function FeatureProducts() {
         <div className="grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-4 mx-auto w-full">
           {Array.from(Array(12)).map((_, index) => (
             <div key={index} className="w-56 h-56 bg-orange-200 rounded">
-              {/* {data.allShopifyProduct.edges.node.description} */}
               {index}
             </div>
           ))}

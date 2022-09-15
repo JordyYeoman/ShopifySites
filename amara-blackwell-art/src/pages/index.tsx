@@ -8,7 +8,6 @@ import ProductGridNoFeature from "../components/ProductGridNoFeature";
 import SingleProductCardSmall from "../components/SingleProductCardSmall";
 
 const IndexPage = () => {
-  console.log("FUCK GATSBY");
   return (
     <Layout>
       <SingleFeatureProduct />
