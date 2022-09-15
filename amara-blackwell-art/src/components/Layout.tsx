@@ -1,8 +1,8 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import { useStaticQuery, graphql } from 'gatsby';
-import Header from './Header';
-import Hero from './Hero';
+import * as React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import Header from "./Header";
+import Hero from "./Hero";
+import Footer from "./Footer";
 
 const Layout = ({ children }: any) => {
   const data = useStaticQuery(graphql`
@@ -17,20 +17,12 @@ const Layout = ({ children }: any) => {
 
   return (
     <>
-      <Header siteTitle={'Huh'} />
+      <Header siteTitle={data?.siteTitle} />
       <Hero />
       <main>{children}</main>
-      <footer className='w-full bg-blue-200 h-32'>
-        © {new Date().getFullYear()} &middot; Built by
-        {` `}
-        <a href='/'>Yeoman Industriessszzz</a>
-      </footer>
+      <Footer />
     </>
   );
-};
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 };
 
 export default Layout;

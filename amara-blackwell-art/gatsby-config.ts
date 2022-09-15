@@ -1,5 +1,5 @@
-import type { GatsbyConfig } from 'gatsby';
-require('dotenv').config();
+import type { GatsbyConfig } from "gatsby";
+require("dotenv").config();
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -9,47 +9,45 @@ const config: GatsbyConfig = {
   graphqlTypegen: true,
   plugins: [
     {
-      resolve: 'gatsby-source-shopify',
+      resolve: "gatsby-source-shopify",
       options: {
-        shopName: 'amarablackwellarts.myshopify.com',
-        accessToken: process.env.STOREFRONT_TOKEN,
-        storeUrl: 'amarablackwellarts.myshopify.com',
+        storeUrl: "amarablackwellarts.myshopify.com",
         password: process.env.ADMIN_API,
       },
     },
-    'gatsby-plugin-postcss',
-    'gatsby-plugin-image',
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
+    "gatsby-plugin-postcss",
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
     {
-      resolve: 'gatsby-plugin-google-analytics',
+      resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: 'G-JXQ7W75K6Q',
+        trackingId: "G-JXQ7W75K6Q",
       },
     },
-    'gatsby-plugin-sitemap',
+    "gatsby-plugin-sitemap",
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: "gatsby-plugin-manifest",
       options: {
-        icon: 'src/images/icon.png',
+        icon: "src/images/icon.png",
       },
     },
-    'gatsby-plugin-mdx',
+    "gatsby-plugin-mdx",
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'images',
-        path: './src/images/',
+        name: "images",
+        path: "./src/images/",
       },
-      __key: 'images',
+      __key: "images",
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'pages',
-        path: './src/pages/',
+        name: "pages",
+        path: "./src/pages/",
       },
-      __key: 'pages',
+      __key: "pages",
     },
     {
       resolve: `gatsby-plugin-react-svg`,

@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* // Custom animate in components */
+.component-animation {
+  /* transition: ease all 1s; */
+}
+
+.component-hidden {
+  opacity: 0;
+}
+
+.component-show {
+  opacity: 1;
+}
