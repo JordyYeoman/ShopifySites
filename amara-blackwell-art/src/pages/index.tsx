@@ -8,11 +8,13 @@ import ProductGridNoFeature from '../components/ProductGridNoFeature';
 import SingleProductCardSmall from '../components/SingleProductCardSmall';
 import Hero from '../components/Hero';
 import ProductSlider from '../components/ProductSlider';
+import FeatureCategories from '../components/FeatureCategories';
 
 const IndexPage = () => {
   return (
     <Layout>
       <Hero />
+      <FeatureCategories />
       <ProductSlider />
       <SingleFeatureProduct />
       <ProductGrid />
