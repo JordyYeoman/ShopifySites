@@ -2,6 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'emberly-black';
+  src: local('emberly-black'),
+    url(../fonts/Emberly-Black.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'emberly-black-narrow';
+  src: local('emberly-black-narrow'),
+    url(../fonts/Emberly-BlackNarrow.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'emberly-bold';
+  src: local('emberly-bold'), url(../fonts/Emberly-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'emberly-bold-narrow';
+  src: local('emberly-bold-narrow'),
+    url(../fonts/Emberly-BoldNarrow.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'emberly-light';
+  src: local('emberly-light'),
+    url(../fonts/Emberly-Light.ttf) format('truetype');
+}
+
+/* Swiper Styles */
+.swiper-button-next,
+.swiper-button-prev {
+  top: auto !important;
+  bottom: 125px;
+  background-color: white;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 20px;
+  padding: 10px;
+}
+.swiper-button-prev {
+  padding-left: 5px;
+}
+.swiper-button-next {
+  padding-right: 5px;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 20px !important;
+}
+.swiper-pagination {
+  text-align: left !important;
+  padding-left: 30%;
+}
+.swiper-pagination-bullet {
+  transition: ease all 1s;
+}
+.swiper-pagination-bullet {
+  height: 4px !important;
+  width: 10px !important;
+  border-radius: 10px !important;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  width: 30px !important;
+}
+
 /* // Custom animate in components */
 .component-animation {
   /* transition: ease all 1s; */
@@ -13,4 +75,21 @@
 
 .component-show {
   opacity: 1;
+}
+
+/* Molecule Styles */
+.emberly-black {
+  font-family: 'emberly-black';
+}
+.emberly-black-narrow {
+  font-family: 'emberly-black-narrow';
+}
+.emberly-bold {
+  font-family: 'emberly-bold';
+}
+.emberly-bold-narrow {
+  font-family: 'emberly-bold-narrow';
+}
+.emberly-light {
+  font-family: 'emberly-light';
 }

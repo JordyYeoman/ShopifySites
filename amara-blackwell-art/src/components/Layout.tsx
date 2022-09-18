@@ -1,8 +1,8 @@
-import * as React from "react";
-import { useStaticQuery, graphql } from "gatsby";
-import Header from "./Header";
-import Hero from "./Hero";
-import Footer from "./Footer";
+import * as React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import Header from './Header';
+import Hero from './Hero';
+import Footer from './Footer';
 
 const Layout = ({ children }: any) => {
   const data = useStaticQuery(graphql`
@@ -18,7 +18,6 @@ const Layout = ({ children }: any) => {
   return (
     <>
       <Header siteTitle={data?.siteTitle} />
-      <Hero />
       <main>{children}</main>
       <Footer />
     </>
