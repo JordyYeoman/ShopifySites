@@ -11,7 +11,7 @@ const DefaultButton = ({
   return (
     <>
       <Link
-        className='bg-blue-500 rounded-lg tracking-wider text-white font-bold mt-8 py-2 px-8'
+        className='bg-blue-500 hover:bg-blue-600 rounded-lg tracking-wider text-white font-bold mt-8 py-2 px-8'
         to={buttonLink}
       >
         {buttonText}

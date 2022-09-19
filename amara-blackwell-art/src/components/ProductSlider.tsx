@@ -9,6 +9,7 @@ import { Pagination, Navigation } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import IntersectionObserverWrapper from './utils/IntersectionObserverWrapper';
 
 function ProductSlider() {
   const data = useStaticQuery(graphql`
@@ -33,15 +34,18 @@ function ProductSlider() {
   `);
   const products = data?.allShopifyProduct?.nodes;
   return (
-    <div className='flex h-full py-48'>
+    <div className='flex h-full pt-36 pb-48'>
       <div className='flex flex-col justify-center items-start w-4/12 px-12'>
-        <SectionTitle title={'Our best sellers'} />
-        <SectionDescription
-          description={
-            'Donec in urna magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tellus metus, interdum at consectetur feugiat, viverra nec arcu.'
-          }
-        />
-        <DefaultButton buttonText={'Discover More'} buttonLink={'/'} />
+        <IntersectionObserverWrapper duration={'duration-1000'}>
+          <SectionTitle title={'Our best sellers'} />
+          <SectionDescription
+            description={
+              'Donec in urna magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tellus metus, interdum at consectetur feugiat, viverra nec arcu.'
+            }
+          />
+          <div className='mt-8'></div>
+          <DefaultButton buttonText={'Discover More'} buttonLink={'/'} />
+        </IntersectionObserverWrapper>
       </div>
       <div className='w-8/12 h-full flex'>
         <Swiper

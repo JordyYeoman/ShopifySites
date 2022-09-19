@@ -9,10 +9,10 @@ const navigationLinks = [
     title: 'Shop',
     url: '/',
   },
-  {
-    title: 'Sale',
-    url: '/',
-  },
+  // {
+  //   title: 'Sale',
+  //   url: '/',
+  // },
   {
     title: 'About',
     url: '/',
