@@ -1,7 +1,17 @@
 import React from 'react';
 
-function SectionTitle({ title }: { title: string }) {
-  return <h3 className='text-7xl emberly-bold text-blue-900'>{title}</h3>;
+type TitleProps = { title: string; size?: string; color?: string };
+
+function SectionTitle({ title, size, color }: TitleProps) {
+  return (
+    <h3
+      className={`${color ? color : ' text-blue-900'} ${
+        size ? size : 'text-7xl'
+      } emberly-bold`}
+    >
+      {title}
+    </h3>
+  );
 }
 
 export default SectionTitle;

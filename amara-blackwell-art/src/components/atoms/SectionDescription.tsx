@@ -1,7 +1,13 @@
 import React from 'react';
 
-function SectionDescription({ description }: { description: string }) {
-  return <div>{description}</div>;
+function SectionDescription({
+  description,
+  color,
+}: {
+  description: string;
+  color?: string;
+}) {
+  return <div className={`${color ? color : ''}`}>{description}</div>;
 }
 
 export default SectionDescription;
