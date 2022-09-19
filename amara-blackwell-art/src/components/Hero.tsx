@@ -46,7 +46,7 @@ function Hero() {
                 "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text."
               }
             />
-            <div className='text-xl font-normal pt-2 max-w-lg'></div>
+            <div className='mb-4 text-xl font-normal pt-2 max-w-lg'></div>
             <DefaultButton buttonText={'Find out more'} buttonLink={'/'} />
           </IntersectionObserverWrapper>
         </div>
