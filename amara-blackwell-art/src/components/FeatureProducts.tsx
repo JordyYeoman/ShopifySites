@@ -33,7 +33,7 @@ function FeatureProducts() {
 
   console.log("DATA BUOUOU: ", data);
   return (
-    <div className="container mx-auto max-w-screen-2xl px-4 py-16">
+    <div className="container mx-auto max-w-screen-2xl px-4 py-16 overflow-hidden">
       <div className="flex flex-col">
         <h3 className="text-4xl font-bold pb-4">Artwork</h3>
         <div className="grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-4 mx-auto w-full">

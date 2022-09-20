@@ -27,7 +27,7 @@
 //           </button>
 //         </div>
 //         <div>
-//           <span className="uppercase text-xs bg-green-50 p-0.5 border-green-500 border rounded text-green-700 font-medium select-none">
+//           <span className="uppercase text-xs p-0.5 border-green-500 border rounded text-green-700 font-medium select-none">
 //             available
 //           </span>
 //         </div>
