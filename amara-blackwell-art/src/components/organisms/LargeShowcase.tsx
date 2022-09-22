@@ -13,20 +13,26 @@ type ShowcaseProps = {
 
 function LargeShowcase({ description, buttonText, buttonLink }: ShowcaseProps) {
   return (
-    <div className="flex relative">
-      <div className="absolute w-full h-full top-0 left-0 flex mt-24 justify-center">
+    <div className="flex flex-col md:flex-row relative max-h-[50rem]">
+      <div className="absolute w-full left-0 z-10 flex top-4 md:top-24 justify-center">
         <SplitColorText text={"Amazing Divide"} />
       </div>
-      <div className="w-full md:w-6/12 bg-slate-50 pb-24 pt-48 px-8 pt-4">
+      <div className="relative w-full md:w-6/12 bg-slate-50 pb-24 pt-48 px-8 pt-4">
+        <div className="flex md:hidden absolute top-0 left-0 w-full z-0 h-full">
+          <div className="w-6/12 h-full bg-slate-50"></div>
+          <div className="w-6/12 h-full bg-blue-200"></div>
+        </div>
         <IntersectionObserverWrapper duration={"duration-500"}>
           <CircleShowcaseButton />
         </IntersectionObserverWrapper>
-        <div className="pt-60"></div>
-        <IntersectionObserverWrapper duration={"duration-[1.5s]"}>
-          <SectionDescription description={description} />
-          <div className="pt-8"></div>
-          <DefaultButton buttonText={buttonText} buttonLink={buttonLink} />
-        </IntersectionObserverWrapper>
+        <div className="pt-40 md:pt-60 lg:pt-0 lg:h-[80%]"></div>
+        <div className="z-20 relative text-center md:text-left max-w-2xl h-32">
+          <IntersectionObserverWrapper duration={"duration-[1.5s]"}>
+            <SectionDescription description={description} />
+            <div className="pt-8"></div>
+            <DefaultButton buttonText={buttonText} buttonLink={buttonLink} />
+          </IntersectionObserverWrapper>
+        </div>
       </div>
       <div className="w-full md:w-6/12">
         <img
@@ -52,7 +58,7 @@ export default LargeShowcase;
 
 const CircleShowcaseButton = () => {
   return (
-    <div className="bg-blue-600 rounded-full text-xs w-20 flex items-center justify-center h-20 font-bold absolute top-4 left-4 p-4 text-white -rotate-45 emberly-black text-center tracking-widest font-bold uppercase letter-spacing">
+    <div className="hidden sm:flex bg-blue-600 rounded-full text-xs w-20 flex items-center justify-center h-20 font-bold absolute top-4 left-4 p-4 text-white -rotate-45 emberly-black text-center tracking-widest font-bold uppercase letter-spacing">
       Latest <br />
       Artwork
     </div>
