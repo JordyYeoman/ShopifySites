@@ -40,7 +40,7 @@ function FeatureCategories() {
       <IntersectionObserverWrapper duration={'duration-500'}>
         <div className='flex flex-col md:flex-row md:h-[40rem]'>
           <div className='flex flex-col h-full w-full'>
-            <div className='w-full h-3/5 p-2 relative group'>
+            {/* <div className='w-full h-3/5 p-2 relative group'>
               <Link to='/'>
                 <GatsbyImage
                   className='object-fit object-cover h-full w-full'
@@ -69,8 +69,29 @@ function FeatureCategories() {
                 />
               </div>
               <div className='group-hover:pointer-events-none bg-gradient-to-br from-blue-300 to-slate-900 opacity-60 transition duration-300 w-full h-full absolute top-0 z-10 left-0'></div>
+            </div> */}
+            <div className='w-full h-3/5 p-2 relative group'>
+              <OverlayGradient />
+              <Link className='' to='/'>
+                <GatsbyImage
+                  className='object-fit object-cover h-full w-full'
+                  image={
+                    data?.allShopifyCollection?.edges[0]?.node?.image
+                      ?.gatsbyImageData
+                  }
+                  alt={data?.allShopifyCollection?.edges[0]?.node?.title}
+                />
+              </Link>
+              <OverlayCard
+                title={data?.allShopifyCollection?.edges[0]?.node?.title}
+                description={
+                  data?.allShopifyCollection?.edges[0]?.node?.description
+                }
+                buttonText={'View Collection'}
+                buttonLink={'/'}
+                titleSize={'text-4xl'}
+              />
             </div>
-
             <div className='w-full h-2/5 p-2 relative group'>
               <OverlayGradient />
               <Link to='/'>
@@ -123,16 +144,16 @@ function FeatureCategories() {
                 <GatsbyImage
                   className='object-fit object-cover h-full w-full'
                   image={
-                    data?.allShopifyCollection?.edges[5]?.node?.image
+                    data?.allShopifyCollection?.edges[3]?.node?.image
                       ?.gatsbyImageData
                   }
-                  alt={data?.allShopifyCollection?.edges[5]?.node?.title}
+                  alt={data?.allShopifyCollection?.edges[3]?.node?.title}
                 />
               </Link>
               <OverlayCard
-                title={data?.allShopifyCollection?.edges[5]?.node?.title}
+                title={data?.allShopifyCollection?.edges[3]?.node?.title}
                 description={
-                  data?.allShopifyCollection?.edges[5]?.node?.description
+                  data?.allShopifyCollection?.edges[3]?.node?.description
                 }
                 buttonText={'View Collection'}
                 buttonLink={'/'}
@@ -162,7 +183,7 @@ const OverlayCard = ({
   titleSize?: string;
 }) => {
   return (
-    <div className='absolute top-0 z-20 left-0 transition duration-300 flex flex-col opacity-0 group-hover:opacity-100 items-center justify-center w-full h-full px-6 text-center'>
+    <div className='w-full absolute top-0 z-20 left-0 transition duration-300 flex flex-col opacity-0 group-hover:opacity-100 items-center justify-center w-full h-full px-6 md:px-20 text-center'>
       <SectionTitle title={title} size={titleSize} color={'text-white'} />
       <SectionDescription description={description} color={'text-white'} />
       <SecondaryButton buttonText={buttonText} buttonLink={buttonLink} />
