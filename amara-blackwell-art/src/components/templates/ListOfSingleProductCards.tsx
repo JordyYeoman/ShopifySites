@@ -10,7 +10,6 @@ function ListOfSingleProductCards() {
     query SingleCardFeaturesCollection {
       allShopifyCollection(
         filter: { title: { in: "HomePageSingleCardFeatures" } }
-        limit: 6
       ) {
         edges {
           node {
@@ -43,7 +42,7 @@ function ListOfSingleProductCards() {
   `);
   const products = data.allShopifyCollection.edges[0].node.products;
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col pb-12'>
       <div>
         <IntersectionObserverWrapper duration={'duration-[1.5s]'}>
           <div className='px-16 md:px-0 max-w-2xl text-center flex items-center flex-col mx-auto py-12'>
@@ -57,16 +56,19 @@ function ListOfSingleProductCards() {
         </IntersectionObserverWrapper>
       </div>
       <div className='flex flex-col md:flex-row flex-wrap justify-around py-4 lg:px-6'>
-        {products.map((product) => (
-          <SingleProductCardSmall
-            gatsbyImageData={product.featuredImage.gatsbyImageData}
-            imageAlt={product?.featureImage?.altText ?? ''}
-            title={product.title}
-            price={product.priceRangeV2.maxVariantPrice.amount}
-            handle={product.handle}
-            id={product.shopifyId}
-          />
-        ))}
+        {products.map((product: any, index: number) => {
+          if (index > 5) return;
+          return (
+            <SingleProductCardSmall
+              gatsbyImageData={product.featuredImage.gatsbyImageData}
+              imageAlt={product?.featureImage?.altText ?? ''}
+              title={product.title}
+              price={product.priceRangeV2.maxVariantPrice.amount}
+              handle={product.handle}
+              id={product.shopifyId}
+            />
+          );
+        })}
       </div>
     </div>
   );
