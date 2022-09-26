@@ -21,7 +21,7 @@ function SingleProductCardSmall({
 }: Props) {
   return (
     <div className="p-4 translate-y-0 transition duration-300 hover:-translate-y-1">
-      <div className="w-72 max-w-1/3 md:max-w-xs mx-auto">
+      <div className="sm:w-72 md:w-72 max-w-1/3 md:max-w-xs mx-auto">
         <div className="bg-slate-50 shadow-md rounded-sm max-w-sm">
           <Link to={`products/${handle}`}>
             <GatsbyImage

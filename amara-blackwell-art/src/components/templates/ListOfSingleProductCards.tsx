@@ -55,7 +55,7 @@ function ListOfSingleProductCards() {
           </div>
         </IntersectionObserverWrapper>
       </div>
-      <div className="flex flex-col md:flex-row flex-wrap justify-around py-4 lg:px-6">
+      <div className="flex flex-row flex-wrap justify-around py-4 lg:px-6">
         {products.map((product: any, index: number) => {
           if (index > 5) return;
           return (
