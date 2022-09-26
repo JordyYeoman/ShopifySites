@@ -222,3 +222,13 @@
 .credits__link:focus {
   color: rgb(191, 137, 135);
 }
+
+/* Footer Styles  */
+.footer-logo {
+  display: none;
+}
+@media (min-width: 480px) {
+  .footer-logo {
+    display: flex;
+  }
+}
