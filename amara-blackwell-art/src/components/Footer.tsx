@@ -69,6 +69,8 @@ const BuyMeABeer = () => {
           <img
             className='object-cover object-center w-full h-full rounded-full'
             src='https://i.pinimg.com/originals/60/fd/e8/60fde811b6be57094e0abc69d9c2622a.jpg'
+            loading='lazy'
+            alt='Buy me a beer icon with text'
           />
         </a>
       </div>

@@ -16,6 +16,7 @@ function SingleFeatureProduct() {
                     src='https://i.etsystatic.com/22785252/r/il/bc7b4c/3370790004/il_570xN.3370790004_keov.jpg'
                     className='w-full relative z-10'
                     alt=''
+                    loading='lazy'
                   />
                   <div className='border-4 border-yellow-200 absolute top-10 bottom-10 left-10 right-10 z-0'></div>
                 </div>
